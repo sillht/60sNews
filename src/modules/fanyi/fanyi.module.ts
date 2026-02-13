@@ -102,8 +102,8 @@ class ServiceFanyi {
 
   async #fetch(text: string, from: string, to: string) {
     function aesDecode(value: string) {
-      const key = 'ydsecret://query/key/B*RGygVywfNBwpmBaZg*WT7SIOUP2T0C9WHMZN39j^DAdaZhAnxvGcCY6VYFwnHl'
-      const iv = 'ydsecret://query/iv/C@lZe2YzHtZ2CYgaXKSVfsb7Y4QWHjITPPZ0nQp87fBeJ!Iv6v^6fvi2WN@bYpJ4'
+      const key = ''
+      const iv = ''
       const encoder = crypto.createDecipheriv('aes-128-cbc', Common.md5(key, 'buffer'), Common.md5(iv, 'buffer'))
       return encoder.update(value, 'base64', 'utf-8') + encoder.final('utf-8')
     }
